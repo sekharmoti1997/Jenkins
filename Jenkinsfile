@@ -18,9 +18,13 @@ pipeline {
                 echo "Conducting SonarQube Code Analysis....."
             }
         }
-        stage("Deploy"){
+        stage("Artifact Deploy"){
             steps{
                 echo "Here we Deploy the code....."
+            }
+        stage("Docker Container and Image Push"){
+            steps{
+                echo "Here we Create a container, Build an Image and Push it into the Registry......"
             }
         }
     }
