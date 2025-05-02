@@ -3,7 +3,7 @@
 pipeline {
     agent any
     stages{
-        stage("checkout"){
+        stage("code_checkout"){
             steps{
                 echo "Here we clone the source code from repo....."
             }
@@ -13,12 +13,16 @@ pipeline {
                 echo "We build the source code....."
             }
         }
-        stage("test"){
+        stage("code Analysis Stage"){
             steps{
                 echo "Conducting SonarQube Code Analysis....."
             }
         }
-        stage("Deploy"){
+        stage("Artifact Deploymetn"){
+            steps{
+                echo "Here we Deploy the code....."
+            }
+        stage("DockerContainerImagePull"){
             steps{
                 echo "Here we Deploy the code....."
             }
